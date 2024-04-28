@@ -11,13 +11,11 @@ struct node
     struct node *next;
 };
 struct node *head;
-struct node *tail;
 public:
 //CONSTRUCTORS
 doublelist()
 {
     head=NULL;
-    tail=NULL;
 }
 //FUNCTIONS
 int insatbeg(int);
@@ -123,7 +121,7 @@ int main()
                     }
                     else
                     {
-                        printf("\nThe lsit is empty");
+                        printf("\nThe list is empty");
                     }
                     break;
                 }
@@ -285,6 +283,7 @@ int doublelist::delatbeg()
     else if(temp->next==temp && temp->prev==temp)
     {
         free(temp);
+        head=NULL;
         return 1;
     }
     else
@@ -356,6 +355,7 @@ int doublelist::delatend()
     else if(temp->next==temp && temp->prev==temp)
     {
         free(temp);
+        head=NULL;
         return 1;
     }
     else
@@ -384,7 +384,7 @@ void doublelist::search(int val)
         {
             if(temp->data==val)
             {
-                printf("\nThe list is found at %d position",count);
+                printf("\nThe element is found at %d position",count);
                 flag=1;
                 break;
             }
