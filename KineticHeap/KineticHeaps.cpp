@@ -32,7 +32,7 @@ int main()
     int ch;
     while (1) 
     {
-        printf("\n1.Insert\n2.Display\n3.Deletion\n4.Display sorted array of Deleted elements\n5.Search\n6.Reduce an element\n7.Exit");
+        printf("\n1.Insert\n2.Display\n3.Deletion\n4.Display sorted array of deleted elements\n5.Search\n6.Reduce an element\n7.Exit");
         printf("\nEnter your choice : ");
         scanf("%d", &ch);
         switch (ch) 
