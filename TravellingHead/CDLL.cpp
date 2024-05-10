@@ -172,7 +172,6 @@ int main()
         }
         case 4:
         {
-            printf("The values of the list:");
             printf("\n");
             list.display();
             break;
@@ -407,6 +406,7 @@ void doublelist::display()
     }
     else
     {
+        printf("The values of the list:");
         struct node *temp=head->next;
         printf("\t%d",head->data);
         while(temp!=head)
