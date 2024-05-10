@@ -271,8 +271,15 @@ int heap::reduceheapify()
         printf("By how much u need to reduce : ");
         scanf("%d", &redfactor);
         cur = searchindex(num);
-        arr[cur] = arr[cur] - redfactor;
-        heapify(cur);
+        if(cur!=0)
+        {
+            arr[cur] = arr[cur] - redfactor;
+            heapify(cur);
+        }
+        else
+        {
+            printf("\nThe element is not present");
+        }
         printf("\nDo u wish to continue ? (y/n) ");
         getchar();
         scanf("%c", &ans);
