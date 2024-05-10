@@ -32,7 +32,7 @@ int main()
     int ch;
     while (1) 
     {
-        printf("\n1.Insert\n2.Display\n3.Deletion\n4.Sorting\n5.Search\n6.Reduce an element\n7.Exit");
+        printf("\n1.Insert\n2.Display\n3.Deletion\n4.Display sorted array of Deleted elements\n5.Search\n6.Reduce an element\n7.Exit");
         printf("\nEnter your choice : ");
         scanf("%d", &ch);
         switch (ch) 
@@ -227,10 +227,17 @@ void heap::inserts(int num)
 void heap::sort() 
 {
     int i;
-    printf("\nThe sorted array is : ");
-    for (i = 0; i <= curs; i++) 
+    if(curs==-1)
     {
-        printf("%d ", arrs[i]);
+        printf("\nThere are no elements in the sorted array");
+    }
+    else
+    {
+        printf("\nThe sorted array is : ");
+        for (i = 0; i <= curs; i++) 
+        {
+            printf("%d ", arrs[i]);
+        }
     }
 }
 //Method to search an element in the heap
