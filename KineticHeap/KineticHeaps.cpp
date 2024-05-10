@@ -257,24 +257,24 @@ int heap::searchindex(int num)
             return i;
         }
     }
-    return 0;
+    return -1;
 }
 //Method to reduce given elements by reducefactor
 int heap::reduceheapify() 
 {
     char ans = 'y';
-    int num, redfactor, cur;
+    int num, redfactor, current;
     while (ans == 'y') 
     {
         printf("\nEnter the element to be reduced : ");
         scanf("%d", &num);
         printf("By how much u need to reduce : ");
         scanf("%d", &redfactor);
-        cur = searchindex(num);
-        if(cur!=0)
+        current = searchindex(num);
+        if(current!=-1)
         {
-            arr[cur] = arr[cur] - redfactor;
-            heapify(cur);
+            arr[current] = arr[current] - redfactor;
+            heapify(current);
         }
         else
         {
